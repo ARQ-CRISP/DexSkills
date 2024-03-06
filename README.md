@@ -1,3 +1,6 @@
 # DexSkill
 
-https://github.com/ARQ-CRISP/DexSkill/blob/main/videos/LH_TASK_B_Cut_WipeTomato.mp4
+
+
+https://github.com/ARQ-CRISP/DexSkill/assets/62802841/19e244b5-869b-482b-b166-5f708c89e7d5
+
