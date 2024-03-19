@@ -1,0 +1,154 @@
+
+{
+"LH_1": [
+    {"start_time": 0, "end_time":3.9, "label": "Reach"},
+    {"start_time": 3.9, "end_time": 5.2, "label": "Flip"}, 
+    {"start_time": 5.3, "end_time": 7.7, "label": "Pre_touch"}, 
+    {"start_time": 7.7, "end_time": 14.7, "label": "Touch_object"},
+    {"start_time": 14.7, "end_time": 16, "label": "Pull"},
+    {"start_time": 16, "end_time": 17.3, "label": "Push"},
+    {"start_time": 17.3, "end_time": 18.4, "label": "Pull"},
+    {"start_time": 19.7, "end_time": 24.5, "label": "Pre_grasp"}, 
+    {"start_time": 24.5, "end_time": 29.1, "label": "Grasp"},
+    {"start_time": 29.1, "end_time": 31.2, "label": "Lift_with_grasp"},
+    {"start_time": 31.2, "end_time": 33.5, "label": "Release"}
+
+],
+
+"LH_2": [
+    {"start_time": 0, "end_time": 2, "label": "Reach"},
+    {"start_time": 2, "end_time": 5.1, "label": "Pre_touch"},
+    {"start_time": 5.1, "end_time": 8, "label": "Touch_object"},
+    {"start_time": 8, "end_time": 9.1, "label": "Pull"}, 
+    {"start_time": 9.1, "end_time": 13.2, "label": "Pre_grasp"}, 
+    {"start_time": 13.2, "end_time": 18.5, "label": "Grasp"}, 
+    {"start_time": 18.5, "end_time": 21.1, "label": "Lift_with_grasp"}, 
+    {"start_time": 21.1, "end_time": 24, "label": "Transport_forward"},
+    {"start_time": 24, "end_time": 26.5, "label": "Transport_down"},
+    {"start_time": 26.5, "end_time": 32, "label": "Go_back_to_setup"}
+
+],
+
+"LH_3": [
+    {"start_time": 0, "end_time": 8.00, "label": "Pre_rotate"},
+    {"start_time": 8.00, "end_time": 20.00, "label": "Rotate"}, 
+    {"start_time": 20, "end_time": 22, "label": "Lift_with_grasp"}, 
+    {"start_time": 22, "end_time": 26.8, "label": "Shake_a"}, 
+    {"start_time": 26.8, "end_time": 30.6, "label": "Shake_b"}, 
+    {"start_time": 30.6, "end_time": 40.5, "label": "Twist"},
+    {"start_time": 40.5, "end_time": 44, "label": "Side_place"}
+
+],
+
+"LH_4": [
+    {"start_time": 0.1, "end_time": 3.5, "label": "Push"},
+    {"start_time": 3.5, "end_time": 6, "label": "Pull"},
+    {"start_time": 6, "end_time": 8.7, "label": "Push"},
+    {"start_time": 8.7, "end_time": 12, "label": "Pull"},
+    {"start_time": 12, "end_time": 15.2, "label": "Push"},
+    {"start_time": 15.2 , "end_time": 17.3, "label": "Pull"}
+],
+
+"LH_5": [
+    {"start_time": 0.5, "end_time": 3.1, "label": "Pre_touch"},
+    {"start_time": 3.1, "end_time": 8.0, "label": "Touch_object"}, 
+    {"start_time": 8.0, "end_time": 11.2, "label": "Pre_grasp"},  
+    {"start_time": 11.2, "end_time": 14.2, "label": "Grasp"}
+],
+
+"LH_6": [
+    {"start_time": 0.2, "end_time": 8.0, "label": "Pre_rotate"},
+    {"start_time": 8.0, "end_time": 8.7, "label": "Grasp"},
+    {"start_time": 8.7, "end_time": 14.8, "label": "Rotate"}, 
+    {"start_time": 14.8, "end_time": 25.0, "label": "Twist"}
+],
+
+"LH_7": [
+    {"start_time": 0, "end_time": 2.6, "label": "Pre_grasp"},
+    {"start_time": 2.6, "end_time": 7.0, "label": "Grasp"},
+    {"start_time": 7.0, "end_time": 8.7, "label": "Lift_with_grasp"},
+    {"start_time": 8.7, "end_time": 15.6, "label": "Twist"}
+],
+
+"LH_8": [
+    {"start_time": 0, "end_time": 2.6, "label": "Pre_touch"},
+    {"start_time": 2.6, "end_time": 3.0, "label": "Flip"},
+    {"start_time": 3.0, "end_time": 7.9, "label": "Pre_grasp"},
+    {"start_time": 7.9, "end_time": 8.7, "label": "Grasp"}
+],
+"LH_9": [
+    {"start_time": 0, "end_time": 2.2, "label": "Grasp"},
+    {"start_time": 2.2, "end_time": 3.8, "label": "Lift_with_grasp"},
+    {"start_time": 3.8, "end_time": 5.1, "label": "Release"},
+    {"start_time": 5.1, "end_time": 7.7, "label": "Go_back_to_setup"}
+],
+"LH_10": [
+    {"start_time": 0.1, "end_time": 3.5, "label": "Shake_a"},
+    {"start_time": 3.5, "end_time": 7.5, "label": "Shake_b"},
+    {"start_time": 7.5, "end_time": 9, "label": "Shake_a"}
+],
+"LH_11": [
+    {"start_time": 0.7, "end_time": 3.0, "label": "Shake_b"},
+    {"start_time": 3.0, "end_time": 5.7, "label": "Shake_a"},
+    {"start_time": 5.7, "end_time": 10.0, "label": "Shake_b"},
+    {"start_time": 10.0, "end_time": 10.5, "label": "Release"}
+],
+"LH_12": [
+    {"start_time": 0, "end_time": 6.8, "label": "Twist"},
+    {"start_time": 6.8, "end_time":8.7, "label": "Lift_with_grasp"},
+    {"start_time": 8.7, "end_time": 11.9, "label": "Pour"}
+],
+
+"LH_13": [
+    {"start_time": 0, "end_time": 2.0, "label": "Lift_with_grasp"},
+    {"start_time": 2.0, "end_time": 10.3, "label": "Twist"},
+    {"start_time": 10.3, "end_time": 19.2, "label": "Pour"}
+],
+"LH_14": [
+    {"start_time": 0, "end_time": 4.4, "label": "Pour"},
+    {"start_time": 4.4, "end_time": 14.5, "label": "Twist"},
+    {"start_time": 14.5, "end_time": 17.3, "label": "Side_place"}
+    ],
+"LH_15": [
+    {"start_time": 0, "end_time": 1.0, "label": "Flip"},
+    {"start_time": 1.0, "end_time": 5.4, "label": "Pre_grasp"},
+    {"start_time": 5.4, "end_time": 7.3, "label": "Grasp"},
+    {"start_time": 7.3, "end_time": 8.7, "label": "Go_back_to_setup"}
+    ],
+
+"LH_16": [
+    {"start_time": 0, "end_time": 4.1, "label": "Reach"},
+    {"start_time": 4.1, "end_time": 17, "label": "Pre_rotate"},
+    {"start_time": 17, "end_time": 19, "label": "Go_back_to_setup"}
+    ],
+
+"LH_17": [
+    {"start_time": 0, "end_time": 1.9, "label": "Side_place"},
+    {"start_time": 1.9, "end_time": 6.0, "label": "Lift_with_grasp"},
+    {"start_time": 6.0, "end_time": 6.5, "label": "Release"}
+    ],
+"LH_18": [
+    {"start_time": 0, "end_time": 0.9, "label": "Grasp"},
+    {"start_time": 0.9, "end_time": 3.5, "label": "Lift_with_grasp"},
+    {"start_time": 3.5, "end_time": 5.6, "label": "Twist"},
+    {"start_time": 5.6, "end_time": 6.5, "label": "Release"}
+    ],
+
+"LH_19": [
+    {"start_time": 0.3, "end_time": 2, "label": "Flip"},
+    {"start_time": 2, "end_time": 4.5, "label": "Pre_grasp"},
+    {"start_time": 4.5, "end_time": 7.2, "label": "Grasp"},
+    {"start_time": 7.2, "end_time": 8.0, "label": "Lift_with_grasp"},
+    {"start_time": 8.0, "end_time": 13.5, "label": "Shake_a"}
+
+    ],
+
+"LH_20": [
+    {"start_time": 0, "end_time": 1.5, "label": "Lift_with_grasp"},
+    {"start_time": 1.5, "end_time": 7.1, "label": "Twist"},
+    {"start_time": 7.1, "end_time": 8.1, "label": "Side_place"}
+    ]
+
+    }
+    
+    
