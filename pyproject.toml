@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "dexskills"
+version = "0.1.0"
+description = "DexSkills, a novel supervised learning framework that addresses long-horizon dexterous manipulation tasks using primitive skills. DexSkills is trained to recognize and replicate a select set of skills using human demonstration data, which can then segment a demonstrated long-horizon dexterous manipulation task into a sequence of primitive skills to achieve one-shot execution by the robot directly."
+authors = ["Gabriele Giudici <g.giudici@qmul.ac.uk>", "Claudio Coppola <claudcop@amazon.co.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^2.2.2"
+scikit-learn = "^1.4.1.post1"
+matplotlib = "^3.8.3"
+tensorboard = "^2.16.2"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "jupyter-lab"
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
