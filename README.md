@@ -3,37 +3,44 @@
 PAPER WEBSITE : https://arq-crisp.github.io/DexSkills/
 
 [WORK IN PROGRESS]
+Abstact
 Effective execution of long-horizon tasks with dexterous robotic hands remains a significant challenge in real-world problems. While learning from human demonstrations have shown encouraging results, they require extensive data collection for training. Hence, decomposing long-horizon tasks into reusable primitive skills is a more efficient approach. To achieve so, we developed DexSkills, a novel supervised learning framework that addresses long-horizon dexterous manipulation tasks using primitive skills. DexSkills is trained to recognize and replicate a select set of skills using human demonstration data, which can then segment a demonstrated long-horizon dexterous manipulation task into a sequence of primitive skills to achieve one-shot execution by the robot directly. Significantly, DexSkills operates solely on proprioceptive and tactile data, i.e., haptic data. Our real-world robotic experiments show that DexSkills can accurately segment skills, thereby enabling autonomous robot execution of a diverse range of tasks.
 
-Video Submitted
+
 
 ### Intro
-![First_image_lightC](https://github.com/ARQ-CRISP/DexSkill/assets/62802841/fe441aaa-b638-4bbb-aa16-a87db6b6d2b3)
-
-
 The dataset includes data of 20 haptic skils (10 repetitions each):
-1.  Reach
-2.  Setup Position
-3.  Pretouch
-4.  Touch
-5.  Flip
-6.  Wipe Forth
-7.  Wipe Back
-8.  PreGrasp
-9.  Grasp
-10. Lift with Grasp
-11. Transport Forward
-12. Place
-13. PreRotate
-14. Rotate
-15. Shake Up
-16. Shake Down
-17. Twist
-18. Vertical Place
-19. Pour
-20. Release
+| Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          |
+|--------------|---------------------|--------------|---------------------|--------------|---------------------|--------------|---------------------|--------------|---------------------|
+| 1            | Reach               | 2            | Setup Position      | 3            | PreTouch            | 4            | Touch               | 5            | Flip                |
+| 6            | Wipe Forth          | 7            | Wipe Back           | 8            | PreGrasp            | 9            | Grasp               | 10           | Lift with Grasp     |
+| 11           | Transport Forward   | 12           | Place               | 13           | PreRotate           | 14           | Rotate              | 15           | Shake Up            |
+| 16           | Shake Down          | 17           | Twist               | 18           | Vertical Place      | 19           | Pour                | 20           | Release             |
 
-And N Long Tasks executed as a sequence of skills.
+And 20 Long Tasks executed as a sequence of skills.
+
+| Task | I | II | III | IV | V | VI | VII | VIII | IX | X |
+|------|---|----|-----|----|---|----|------|-------|----|---|
+| A (s)| 1 | 5  | 3   | 4  | 7 | 6  | 8    | 9     | 10 | 20|
+| B (t)| 4 | 7  | 8   | 9  | 10| 11 | 12   | 2     |    |   |
+| C (b)| 13| 14 | 10  | 15 | 16| 17 | 18   |       |    |   |
+| D (s)| 6 | 7  | 6   | 7  | 6 | 7  |      |       |    |   |
+| E (b)| 5 | 8  | 9   | 10 | 15| 19 |      |       |    |   |
+| F (b)| 8 | 9  | 10  | 17 |   |    |      |       |    |   |
+| G (b)| 1 | 5  | 8   | 9  |   |    |      |       |    |   |
+| H (t)| 15| 16 | 15  | 12 |   |    |      |       |    |   |
+| I (s)| 16| 15 | 16  | 20 |   |    |      |       |    |   |
+| J (b)| 9 | 10 | 17  | 20 |   |    |      |       |    |   |
+| K (t)| 4 | 8  | 9   |    |   |    |      |       |    |   |
+| L (s)| 13| 14 | 17  |    |   |    |      |       |    |   |
+| M (s)| 9 | 20 | 2   |    |   |    |      |       |    |   |
+| N (s)| 17| 10 | 16  |    |   |    |      |       |    |   |
+| O (b)| 10| 17 | 19  |    |   |    |      |       |    |   |
+| P (t)| 19| 17 | 18  |    |   |    |      |       |    |   |
+| Q (s)| 5 | 8  | 2   |    |   |    |      |       |    |   |
+| R (b)| 1 | 13 | 2   |    |   |    |      |       |    |   |
+| S (s)| 18| 10 | 20  |    |   |    |      |       |    |   |
+| T (b)| 10| 17 | 18  |    |   |    |      |       |    |   |
 
 
 ### Method
