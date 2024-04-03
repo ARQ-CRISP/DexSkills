@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +13,6 @@
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-
-
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
   <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
@@ -22,13 +21,10 @@
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Dexterous Manipulation, Machine Learning For Robot Control, Deep Learning in Grasping and Manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
   <title>DexSkills</title>
   <link rel="icon" type="image/x-icon" href="static/images/First_image_lightC.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
-
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -36,7 +32,6 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -45,7 +40,6 @@
   <script src="static/js/index.js"></script>
 </head>
 <body>
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -61,7 +55,6 @@
                   <a href="https://www.linkedin.com/in/xiaofeng-mao-45449a202/" target="_blank">Xiaofeng Mao</a><sup>1,* </sup>
                 and
                   <a href="https://www.linkedin.com/in/gabrielegiudici93/" target="_blank"> Gabriele Giudici</a><sup>2,*</sup>
-
                 </span>
               </div>
             
@@ -110,8 +103,6 @@
     </div>
   </div>
 </div>
-
-
 <div class="column has-text-centered">
   <div class="publication-links">
     <!-- Arxiv PDF link -->
@@ -152,8 +143,6 @@
     </span>
   </div>
 </div>
-
-
   
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -170,7 +159,6 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
   </div>
 </section>
 <!-- End paper abstract -->
-
 <!-- Presentation video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
@@ -191,51 +179,127 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
 </section>
 <!-- End presentation video -->
   
-
-<!-- Figures displayed one above the other -->
+<!-- Section with multiple images -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <!-- Title for the section -->
+      <h2 class="title is-4 has-text-centered"></h2>
+
       
-      <!-- First item -->
-      <div class="item has-text-centered">
-        <h2 class="title is-4">DexSkills: Framework Overview</h2>
-        <div class="columns is-vcentered">
-          <div class="column is-half">
-            <img src="static/images/First_img_800.png" alt="MY ALT TEXT"/>
-          </div>
-          <div class="column is-half">
-            <h2 class="subtitle has-text-justified">
-              Overview of the proposed long-horizon task segmentation approach. Individual skills are segmented and classified at each temporal window of the demonstration.
-              The demonstrations are collected via the teleoperation system presented in <a href="#related-works">Related Works</a>: "Feeling Good: Validation of Bilateral Tactile Telemanipulation for a Dexterous Robot".
-            </h2>
-          </div>
+      
+      <!-- Section with multiple images and a video -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the section -->
+      <h2 class="title is-4 has-text-centered">DexSkills: Framework Overview</h2>
+      <!-- First image and text -->
+      <div class="columns is-vcentered">
+        <div class="column">
+          <img src="static/images/First_img_800.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="column">
+          <h2 class="subtitle has-text-justified">
+            Overview of the proposed long-horizon task segmentation approach. Individual skills are segmented and classified at each temporal window of the demonstration.
+            The demonstrations are collected via the teleoperation system presented in <a href="#related-works">Related Works</a>: "Feeling Good: Validation of Bilateral Tactile Telemanipulation for a Dexterous Robot".
+          </h2>
+        </div>
+      </div>
+      <!-- Second video and text -->
+      
+      <!-- Video and text -->
+      <div class="columns is-vcentered" style="margin-top: 20px;">
+        <div class="column has-text-centered">
+          <video width="800" controls>
+            <source src="static/videos/video_overview.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered" style="margin-top: 10px;">
+            Example of primitive skills and long-horizon demonstration and autonomous execution. 
+          </h2>
         </div>
       </div>
       
-      <!-- Second item -->
-      <div class="item has-text-centered" style="margin-top: 20px;"> <!-- Added margin-top -->
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+
+
+<!-- Second group of figures -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Demonstration and Autonomous Control Architecture -->
+      <div class="item has-text-centered" style="margin-top: 20px;">
         <h2 class="title is-4">Demonstration and Autonomous Control Architecture</h2>
         <div class="columns is-vcentered">
+          <!-- Text for the second image -->
           <div class="column is-half">
             <h2 class="subtitle has-text-justified">
               The leader agent generates motor control commands for the end effector pose and finger joints of the hand. The follower robot executes corresponding actions based on these commands. During teleoperation, the follower robot provides haptic feedback. 
               When operating the robot autonomously, we control the robot using a distinct MLP trained on the proprioceptive and tactile data (i.e. haptic data) of each separate skill.
             </h2>
           </div>
+          <!-- Second image -->
           <div class="column is-half">
             <img src="static/images/FIG2_800.png" alt="MY ALT TEXT"/>
           </div>
         </div>
       </div>
+
+
+      <!-- Video and text -->
+      <div class="columns is-vcentered" style="margin-top: 20px;">
+        <div class="column has-text-centered">
+          <video width="800" controls>
+            <source src="static/videos/skills_video.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered" style="margin-top: 10px;">
+            [WORK IN PROGRESS]: Video of each  primitive Skill 
+          </h2>
+        </div>
+      </div>
+
       
-      <!-- Third item -->
-      <div class="item has-text-centered" style="margin-top: 20px;"> <!-- Added margin-top -->
+      <!-- New images -->
+      <div class="columns is-centered" style="margin-top: 20px;">
+        <!-- First new image -->
+        <div class="column is-half has-text-centered" style="height: 500px;">
+          <img src="static/images/table_skills_800.png" alt="Table Skills" style="max-width: 100%; max-height: 100%;"/>
+          <h2 class="subtitle has-text-centered">List of primitive skills</h2>
+        </div>
+        <!-- Second new image -->
+        <div class="column is-half has-text-centered" style="height: 500px;">
+          <img src="static/images/table_LH_800.png" alt="Table LH" style="max-width: 100%; max-height: 100%;"/>
+          <h2 class="subtitle has-text-justified">Long-Horizon tasks: primitive skill recombinations. 
+Tasks are denoted by alphabetical letters ranging from A to T. Objects utilized for the demonstrations are indicated within parentheses: (s) sponge, (t) tomato passata package, and (b) bottle containing liquid.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      
+<!-- Third group of figures -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- DexSkills: Learning Framework -->
+      <div class="item has-text-centered" style="margin-top: 120px;">
         <h2 class="title is-4">DexSkills: Learning Framework</h2>
         <div class="columns is-vcentered">
+          <!-- Third image -->
           <div class="column is-half">
             <img src="static/images/FIG3_800.png" alt="MY ALT TEXT"/>
           </div>
+          <!-- Text for the third image -->
           <div class="column is-half">
             <h2 class="subtitle has-text-justified">
               The architecture of our Neural Network for supervised representation learning incorporates an auto-regressive autoencoder and a label decoder.
@@ -245,17 +309,25 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
       
-      <!-- Fourth and Fifth item -->
-      <div class="item has-text-centered" style="margin-top: 20px;"> <!-- Added margin-top -->
+      <!-- Fourth and Fifth group of figures -->
+      <div class="item has-text-centered" style="margin-top: 20px;">
+        <!-- Classification Results -->
         <h2 class="title is-4">Classification Results</h2>
         <div class="columns">
+          <!-- Fourth image -->
           <div class="column">
             <img src="static/images/confmat.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-justified">
               Confusion matrix (%) of the segmentation system on the Long-horizon demonstrations
             </h2>
           </div>
+          <!-- Fifth image -->
           <div class="column">
             <img src="static/images/TSNE_800.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-justified">
@@ -265,16 +337,19 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
         </div>
       </div>
       
-      <!-- Autonomous Robot Execution -->
-      <div class="item has-text-centered" style="margin-top: 20px;"> <!-- Added margin-top -->
+      <!-- Sixth and Seventh group of figures -->
+      <div class="item has-text-centered" style="margin-top: 20px;">
+        <!-- Autonomous Robot Execution -->
         <h2 class="title is-4"> Autonomous Robot Execution</h2>
         <div class="columns">
+          <!-- Sixth image -->
           <div class="column">
             <img src="static/images/VIDEO_A_800.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-justified">
               Long-horizon Task A using a soft sponge      
             </h2>
           </div>
+          <!-- Seventh image -->
           <div class="column">
             <img src="static/images/VIDEO_B_800.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-justified">
@@ -285,10 +360,53 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
       </div>
       
     </div>
+    
+  </div>
+
+
+
+
+
+<!-- Video and text -->
+<div class="container" style="margin-top: 20px;">
+  <div class="columns is-centered">
+    <div class="column is-half has-text-centered">
+      <video width="660" controls>
+        <source src="static/videos/video_taskA.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-justified" style="margin-top: 10px;">
+        Robot Autonomous Execution : Long-Horizon Task A
+      </h2>
+    </div>
+    <div class="column is-half has-text-centered">
+      <video width="660" controls>
+        <source src="static/videos/video_taskB.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-justified" style="margin-top: 10px;">
+      Robot Autonomous Execution : Long-Horizon Task B      
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Related Works -->
+<section id="related-works" class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Related Works</h2>
+
+      <!-- Commented out the PDF and added a link to a web page -->
+      <!-- <iframe src="static/pdfs/FeelingGood_GIUDICI_TAROS_2023.pdf" width="100%" height="550"></iframe> -->
+      <div class="content">
+        <p>Giudici, Gabriele, et al. "Feeling good: Validation of bilateral tactile telemanipulation for a dexterous robot." Annual Conference Towards Autonomous Robotic Systems. Cham: Springer Nature Switzerland, 2023. <a href="https://link.springer.com/chapter/10.1007/978-3-031-43360-3_36" style="color:blue;">[here]</a>.</p>      </div>
+        <p>Coppola, Claudio, and Lorenzo Jamone. "Master of puppets: multi-modal robot activity segmentation from teleoperated demonstrations." 2022 IEEE International Conference on Development and Learning (ICDL). IEEE, 2022. <a href="https://ieeexplore.ieee.org/abstract/document/9962193" style="color:blue;">[here]</a>.</p>      </div>
+
+    </div>
   </div>
 </section>
-
-
+<!-- End paper poster -->
 
 
 
@@ -314,18 +432,8 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
 <!-- </section> -->
 <!-- End youtube video -->
 
-<!-- Related Works -->
-<section id="related-works" class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Related Works</h2>
 
-      <iframe src="static/pdfs/FeelingGood_GIUDICI_TAROS_2023.pdf" width="100%" height="550"></iframe>
-        
-    </div>
-  </div>
-</section>
-<!-- End paper poster -->
+
 
 
 <!--BibTex citation -->
