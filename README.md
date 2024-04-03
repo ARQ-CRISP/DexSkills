@@ -1,15 +1,36 @@
 # DexSkill
 
-PAPER WEBSITE : https://arq-crisp.github.io/DexSkills/
 
 [WORK IN PROGRESS]
-Abstact
+
+<details>
+<summary><strong><em> PAPER WEBSITE:</em></strong></summary>
+
+<div style="background-color: #f2f2f2; padding: 10px;">
+https://arq-crisp.github.io/DexSkills/
+</div>
+</details>
+
+<details>
+<summary><strong><em>ABSTRACT:</em></strong></summary>
+
+<div style="background-color: #f2f2f2; padding: 10px;">
+
 Effective execution of long-horizon tasks with dexterous robotic hands remains a significant challenge in real-world problems. While learning from human demonstrations have shown encouraging results, they require extensive data collection for training. Hence, decomposing long-horizon tasks into reusable primitive skills is a more efficient approach. To achieve so, we developed DexSkills, a novel supervised learning framework that addresses long-horizon dexterous manipulation tasks using primitive skills. DexSkills is trained to recognize and replicate a select set of skills using human demonstration data, which can then segment a demonstrated long-horizon dexterous manipulation task into a sequence of primitive skills to achieve one-shot execution by the robot directly. Significantly, DexSkills operates solely on proprioceptive and tactile data, i.e., haptic data. Our real-world robotic experiments show that DexSkills can accurately segment skills, thereby enabling autonomous robot execution of a diverse range of tasks.
+</div>
+</details>
 
 
 
-### Intro
+
+
+
+<details>
+<summary><strong><em> DEMONSTRATION</em></strong></summary>
+
+<div style="background-color: #f2f2f2; padding: 10px;">
 The dataset includes data of 20 haptic skils (10 repetitions each):
+ 
 | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          |
 |--------------|---------------------|--------------|---------------------|--------------|---------------------|--------------|---------------------|--------------|---------------------|
 | 1            | Reach               | 2            | Setup Position      | 3            | PreTouch            | 4            | Touch               | 5            | Flip                |
@@ -42,12 +63,13 @@ And 20 Long Tasks executed as a sequence of skills.
 | S (s)| 18| 10 | 20  |    |   |    |      |       |    |   |
 | T (b)| 10| 17 | 18  |    |   |    |      |       |    |   |
 
+</div>
+</details>
 
-### Method
-
-### Dataset Links
-
-### Data Modalities
+<details>
+<summary><strong><em> DATASET:</em></strong></summary>
+<div style="background-color: #f2f2f2; padding: 10px;">
+ 
 The dataset provides the following modalities:
 
  - Proprioception
@@ -76,7 +98,8 @@ The `.pt` file located within the `/DexSkill_dataset/dataset` includes all recor
 Furthermore, the `json_file` within this dataset provides human-labeled task segmentation for all long-horizon tasks, serving as a ground truth. 
 
 All trained policies, including those of our framework and comparative works, are inside the `trained_policy` folder. 
-
+</div>
+</details>
 
 
 ### Demo Videos
