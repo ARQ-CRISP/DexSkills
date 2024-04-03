@@ -22,10 +22,7 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
 
 </details>
 
-<video width="320" height="240" controls>
-  <source src="static/videos/IROS_V3.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
 
 
 
