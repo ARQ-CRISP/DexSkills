@@ -17,9 +17,15 @@ https://arq-crisp.github.io/DexSkills/
 <div style="background-color: #f2f2f2; padding: 10px; text-align: justify;">
 Effective execution of long-horizon tasks with dexterous robotic hands remains a significant challenge in real-world problems. While learning from human demonstrations have shown encouraging results, they require extensive data collection for training. Hence, decomposing long-horizon tasks into reusable primitive skills is a more efficient approach. To achieve so, we developed DexSkills, a novel supervised learning framework that addresses long-horizon dexterous manipulation tasks using primitive skills. DexSkills is trained to recognize and replicate a select set of skills using human demonstration data, which can then segment a demonstrated long-horizon dexterous manipulation task into a sequence of primitive skills to achieve one-shot execution by the robot directly. Significantly, DexSkills operates solely on proprioceptive and tactile data, i.e., haptic data. Our real-world robotic experiments show that DexSkills can accurately segment skills, thereby enabling autonomous robot execution of a diverse range of tasks.
 </div>
+
+
+
 </details>
 
-
+<video width="320" height="240" controls>
+  <source src="static/videos/IROS_V3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 
