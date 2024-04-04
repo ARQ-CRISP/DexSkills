@@ -28,7 +28,7 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
 
 
 <details>
-<summary><strong><em> DEMONSTRATION</em></strong></summary>
+<summary><strong><em> DEMONSTRATION: </em></strong></summary>
 
 <div style="background-color: #f2f2f2; padding: 10px;">
 The dataset includes data of 20 haptic skils (10 repetitions each):
