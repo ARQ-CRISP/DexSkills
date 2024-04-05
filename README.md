@@ -32,7 +32,7 @@ Effective execution of long-horizon tasks with dexterous robotic hands remains a
 
 <div style="background-color: #f2f2f2; padding: 10px;">
 The dataset includes data of 20 haptic skils (10 repetitions each):
- 
+
 | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          | Skill Number | Skill Name          |
 |--------------|---------------------|--------------|---------------------|--------------|---------------------|--------------|---------------------|--------------|---------------------|
 | 1            | Reach               | 2            | Setup Position      | 3            | PreTouch            | 4            | Touch               | 5            | Flip                |
@@ -71,7 +71,7 @@ And 20 Long Tasks executed as a sequence of skills.
 <details>
 <summary><strong><em> DATASET:</em></strong></summary>
 <div style="background-color: #f2f2f2; padding: 10px; text-align: justify;"> 
- 
+
 The dataset provides the following modalities:
 
  - Proprioception
@@ -94,12 +94,19 @@ DexSkill_dataset
 
 ```
 
+ There are 60 dataset files for the training, each consisting of a batch size of 256 with data shuffled. The dataset is saved in a dictionary style.  
 
-The `.pt` file located within the `/DexSkill_dataset/dataset` includes all recorded demonstrations for 20 distinct primitive skills. To enhance generalization and avoid overfitting, the datasets are shuffled during the creation process. Additionally, within the `/DexSkill_dataset/LH_dataset` folder, each `.pt` file correspond to a specific long-horizon manipulation task, with no shuffling involved to preserve the time-series sequence of these tasks. 
+ - `data['state_input']` contains the raw haptic data, including the end-effector state, filtered tactile information, filtered contact indicators, and the AH joint state.
+ -  `data['feature_input']` includes proposed features while excluding the raw haptic data.
+ -  `data['state_output']` and `data['features_output']` is the proposed feature at the next timestep, which is used to train the auto-regressive autoencoder.
+ -   `data['label']` includes the skill name for the recorded task.
 
-Furthermore, the `json_file` within this dataset provides human-labeled task segmentation for all long-horizon tasks, serving as a ground truth. 
+The `.pt` files located within the `/DexSkill_dataset/dataset` directory encompass a comprehensive collection of recorded demonstrations across 20 primitive skills. Additionally, within the `/DexSkill_dataset/LH_dataset` folder, each `.pt` file correspond to a specific long-horizon manipulation task, with no shuffling involved to preserve the time-series sequence of these tasks. 
 
-All trained policies, including those of our framework and comparative works, are inside the `trained_policy` folder. 
+All trained policies, including those of our framework and comparative works, are inside the `trained_policy` folder. Furthermore, the `json_file` within this dataset provides human-labeled task segmentation for all long-horizon tasks, serving as a ground truth. 
+
+The demo code for load the dataset and train the classifier is in the file `/code/train_classifier.py`
+
 </div>
 </details>
 
