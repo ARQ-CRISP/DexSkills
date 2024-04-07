@@ -1,8 +1,7 @@
 import lightning as L
 import torch
+from dexskills.model.blocks import BatchedBlock, FCBlock, ResidualBlock
 from torch import nn
-
-from DexSkills.src.dexskills.model.blocks import BatchedBlock, FCBlock, ResidualBlock
 
 
 class Encoder(nn.Module):

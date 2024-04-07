@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from blocks import FCBlock
+from dexskills.model.blocks import FCBlock
 from torch import nn
 
 

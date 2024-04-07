@@ -1,8 +1,9 @@
 import lightning as pl
+import numpy as np
 import torch
 from dexskills.data.constants import label_names
 from dexskills.model.autoencoder import AutoEncoder, Encoder
-from dexskills.model.classifier import Classifier
+from dexskills.model.classifier import ClassifierNet
 from sklearn.preprocessing import OneHotEncoder
 from tensorboardX import SummaryWriter
 
@@ -11,7 +12,7 @@ class AutoEncoderClassifier(pl.LightningModule):
     def __init__(
         self,
         autoencoder: AutoEncoder,
-        classifier: Classifier,
+        classifier: ClassifierNet,
         learning_rate: float = 1e-3,
     ):
         super().__init__()
@@ -22,7 +23,9 @@ class AutoEncoderClassifier(pl.LightningModule):
         self.reconstruction_loss = torch.nn.MSELoss()
         self.label_loss = torch.nn.CrossEntropyLoss()
         self.writer = SummaryWriter("DexSkill_model_training")
-        self.label_encoder = OneHotEncoder(categories=[label_names], sparse=False)
+        self.label_encoder = OneHotEncoder(
+            categories=[label_names], sparse_output=False
+        )
         self.label_encoder.fit(label_names.reshape(-1, 1))
 
         self.automatic_optimization = False
@@ -46,7 +49,11 @@ class AutoEncoderClassifier(pl.LightningModule):
         AE_output = torch.cat((feature_output, state_output), dim=1)
 
         label = torch.tensor(
-            self.label_encoder.transform(np.array(data["label"]).reshape(-1, 1))
+            self.label_encoder.transform(
+                np.array(
+                    batch["label"],
+                ).reshape(-1, 1)
+            )
         )
 
         decoded, classified = self(AE_input)
@@ -65,7 +72,10 @@ class AutoEncoderClassifier(pl.LightningModule):
 
         preds_class_indices = classified.argmax(dim=1).cpu().detach().numpy()
 
-        self.log(f"{label_loss = :.2f} + {reconstruction_loss = : .2f} = {loss: .2f}")
+        # self.log(f"{label_loss = :.2f} + {reconstruction_loss = : .2f} = {loss: .2f}")
+        self.log("label_loss", label_loss, prog_bar=True)
+        self.log("reconstruction_loss", reconstruction_loss, prog_bar=True)
+        self.log("total_loss", loss, prog_bar=True)
         self.writer.add_scalar(
             "Reconstruction Loss/Train", reconstruction_loss, self.global_step
         )
@@ -77,10 +87,10 @@ class AutoEncoderClassifier(pl.LightningModule):
 
     def configure_optimizers(self):
         en_optimizer = torch.optim.Adam(
-            params=self.encoder.parameters(), lr=self.hparams.learning_rate
+            params=self.autoencoder.encoder.parameters(), lr=self.hparams.learning_rate
         )
         de_optimizer = torch.optim.Adam(
-            params=self.decoder.parameters(), lr=self.hparams.learning_rate
+            params=self.autoencoder.decoder.parameters(), lr=self.hparams.learning_rate
         )
         cl_optimizer = torch.optim.Adam(
             params=self.classifier.parameters(), lr=self.hparams.learning_rate
@@ -93,7 +103,7 @@ class AutoEncoderClassifier(pl.LightningModule):
 
 
 class EncoderClassifier(pl.LightningModule):
-    def __init__(self, encoder: Encoder, classifier: Classifier):
+    def __init__(self, encoder: Encoder, classifier: ClassifierNet):
         super().__init__()
         self.encoder = encoder
         self.classifier = classifier

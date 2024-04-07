@@ -2,3 +2,4 @@
 *.tar.gz
 *.swp
 *.whl
+events.out.tfevents.*
