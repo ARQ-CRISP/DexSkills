@@ -1,3 +1,5 @@
+import lightning as L
+import torch
 from torch import nn
 
 from DexSkills.src.dexskills.model.blocks import BatchedBlock, FCBlock, ResidualBlock
@@ -74,3 +76,28 @@ class AutoEncoder(nn.Module):
         out = self.encoder(x)
         out = self.decoder(x)
         return out
+
+
+# class AutoEncoder(L.LightningModule):
+#     def __init__(
+#         self,
+#         input_size=143,
+#         bottleneck_size=64,
+#         hidden_size1: int = 1024,
+#         hidden_size2: int = 512,
+#     ):
+#         super().__init__()
+#         self.input_size = input_size
+
+#         self.encoder = Encoder(input_size, bottleneck_size, hidden_size1, hidden_size2)
+#         self.decoder = Decoder(input_size, bottleneck_size, hidden_size2, hidden_size1)
+
+#     def forward(self, x):
+#         out = self.encoder(x)
+#         out = self.decoder(x)
+#         return out
+
+#     def configure_optimizers(self):
+#         en_optimizer = torch.optim.Adam(self.encoder.parameters(), lr=1e-3)
+#         de_optimizer = torch.optim.Adam(self.decoder.parameters(), lr=1e-3)
+#         return [en_optimizer, de_optimizer]

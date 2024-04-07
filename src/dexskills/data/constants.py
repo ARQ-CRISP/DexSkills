@@ -1,3 +1,5 @@
+from importlib import resources
+
 import numpy as np
 
 label_names = np.array(

@@ -2,8 +2,10 @@
 name = "dexskills"
 version = "0.1.0"
 description = "DexSkills, a novel supervised learning framework that addresses long-horizon dexterous manipulation tasks using primitive skills. DexSkills is trained to recognize and replicate a select set of skills using human demonstration data, which can then segment a demonstrated long-horizon dexterous manipulation task into a sequence of primitive skills to achieve one-shot execution by the robot directly."
-authors = ["Gabriele Giudici <g.giudici@qmul.ac.uk>", "Claudio Coppola <claudcop@amazon.co.uk>"]
+authors = ["Xiaofeng Mao <xiaofeng.mao@ed.ac.uk>", "Gabriele Giudici <g.giudici@qmul.ac.uk>", "Claudio Coppola <claudcop@amazon.co.uk>"]
 readme = "README.md"
+homepage = "https://arq-crisp.github.io/DexSkills/"
+include = ["DexSkill_dataset", "py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -22,6 +24,9 @@ mypy = "^1.9.0"
 jupyterlab = "^4.1.5"
 tensorboard = "^2.16.2"
 tensorboardx = "^2.6.2.2"
+
+[tool.mypy]
+python_version = "^3.9"
 
 [build-system]
 requires = ["poetry-core"]
