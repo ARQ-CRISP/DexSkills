@@ -1,4 +1,5 @@
 import os
+import re
 from importlib import resources
 from pathlib import PosixPath
 from typing import Union
@@ -11,7 +12,7 @@ LHdataset_path = resources.files("dexskills") / "DexSkill_dataset" / "LH_dataset
 
 
 def extract_number(f):
-    s = re.findall("\d+", f)
+    s = re.findall(r"\d+", f)
     return (int(s[0]) if s else -1, f)
 
 

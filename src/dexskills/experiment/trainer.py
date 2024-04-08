@@ -3,7 +3,7 @@ import logging
 import lightning as L
 import torch
 from dexskills.data.constants import label_names
-from dexskills.data.dataset import DexSkillsDataset
+from dexskills.data.dataset import DexSkillsDataset, LongHorizonTasksDataset
 from dexskills.model.autoencoder import AutoEncoder
 from dexskills.model.classifier import ClassifierNet
 from dexskills.model.composite import AutoEncoderClassifier
@@ -25,6 +25,9 @@ classifier = ClassifierNet(num_classes=len(label_names), input_size=BOTTLENECK_D
 composite_model = AutoEncoderClassifier(autoencoder, classifier)
 
 train_loader = DataLoader(DexSkillsDataset(), batch_size=1, shuffle=True, num_workers=4)
+test_loader = DataLoader(
+    LongHorizonTasksDataset(), batch_size=1, shuffle=False, num_workers=4
+)
 
 
 checkpoint_callback = ModelCheckpoint(
