@@ -30,7 +30,7 @@ train_loader = DataLoader(DexSkillsDataset(), batch_size=1, shuffle=True, num_wo
 checkpoint_callback = ModelCheckpoint(
     monitor="total_loss",  # Name of the metric to monitor
     dirpath="checkpoints/",  # Directory where checkpoints will be saved
-    filename="my-model-{epoch:02d}-{val_loss:.2f}",
+    filename="skill-segmentation-net-{epoch:02d}-{total_loss:.2f}",
     save_top_k=3,  # Save the top 3 models according to val_loss
     mode="min",  # Minimize val_loss
     every_n_epochs=1,  # Checkpoint frequency
