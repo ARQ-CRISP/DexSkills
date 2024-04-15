@@ -1,8 +1,6 @@
 # DexSkill: Skill Segmentation Using Haptic Data for Learning Autonomous Long-Horizon Robotic Manipulation Tasks
 
 
-[WORK IN PROGRESS]
-
 <details>
 <summary><strong><em> PAPER WEBSITE:</em></strong></summary>
 
